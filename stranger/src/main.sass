@@ -1,0 +1,239 @@
+$form-dark-grey: #4d4646;
+$form-grey: #5b5656;
+$form-green: #7fcd91;
+$form-white: #f5eaea;
+
+$page-turquoise: #75d9b3;
+$page-red: #aa6c71;
+$page-purple: #f4886c;
+$page-yellow: #ffec73;
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap')
+
+html
+  font-family: 'Comfortaa', cursive
+  font-size: 2vw
+
+path
+  fill: $form-grey
+
+.flex
+  display: flex
+  &__page
+    flex-wrap: wrap
+    justify-content: space-evenly
+
+.ml-2em
+  margin-left: 2em
+
+.mt-2rem
+  margin-top: 2rem
+
+.m-3rem
+  margin: 3rem
+
+.w-13vw
+  width: 13vw
+
+.w-50vw
+  width: 50vw
+
+.w-50p
+  width: 50%
+
+.ta-center
+  text-align: center
+  
+.page__card
+  padding: 2rem
+  margin-bottom: 1rem
+  border-radius: 35px
+  background-color: $page-yellow
+  @media (max-width: 551.98px)
+    width: 100vh
+  @media (min-width: 552px)
+    width: 40vw
+  @media (min-width: 1440px)
+    width: 30vw
+
+.form
+  width: 100%
+  flex-direction: column
+  align-items: center
+  background-color: $form-dark-grey
+  &__background
+    display: block
+    margin: 0 auto
+    height: 108vw
+  &__container
+    position: absolute
+    margin-top: -105vw
+    width: 100%
+    max-height: 108vw
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    z-index: 1
+    &_textarea
+      display: block
+      padding: 1%
+      width: 44%
+      height: 41vh
+      border-radius: 0
+      border: none
+      color: $form-green
+      font-size: 21pt
+      background-color: $form-dark-grey
+      transition: transform 1s
+      overflow: auto
+      resize: none
+      &--description
+        height: 21vh
+    &_label
+      margin-top: 1rem
+      margin-bottom: 1rem
+      text-align: center
+      color: $form-green
+    &_input
+      display: block
+      padding: 1%
+      width: 44%
+      border: none
+      color: $form-green
+      background-color: $form-dark-grey
+      font-size: 21pt
+      &--small
+        width: 20%
+    &_checkbox
+      display: none
+      &:checked + .tag
+        color: #039be5
+        background-color: #333
+    &_tags
+      margin-left: 1rem
+      width: 55vw
+      flex-wrap: wrap
+      justify-content: start
+    &_image
+      height: 10rem
+      width: 44%
+      &-btn
+        background-color: $form-grey
+        border: none
+        box-shadow: inset 0 0 15px 10px #4d4646
+      &-input
+        position: absolute
+    &_button-add
+      margin-top: 3rem
+      padding: 2vh 4vh
+      color:  $form-green
+      border: none
+      background-color: $form-grey
+      box-shadow: 0 0 15px 10px $form-dark-grey
+    &_button-add-file
+      overflow: hidden
+.button--del
+  padding: .2vw .9vw
+  color:  $form-white
+  border: none
+  background-color: #cd4539
+  cursor: pointer
+  border-radius: 35px
+
+input[type="file"]
+  opacity: 0
+
+.form__container_select
+  display: block
+  width: 74%
+  padding: 4%
+  border: none
+  outline: none
+  color: $form-green
+  background: $form-dark-grey
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  cursor: pointer
+  font-size: 21pt
+  &--type
+    width: 100%
+    padding: 6%
+  &--type-tag
+    width: 46%
+    padding: 1%
+  option
+    color: $form-green
+    background-color: $form-dark-grey
+    border: none
+
+.flex--form-hero
+  margin-top: 1rem
+  width: 44%
+  justify-content: center
+  text-align: -moz-center
+  text-align: -webkit-center
+
+.link
+  padding: 15px 20px
+  font-size: 2.5vw
+  white-space: unset
+  cursor: pointer
+  color: $page-red
+  text-decoration: none
+  &:hover
+    color: #28d4db
+
+.form__container_input[type=checkbox]
+  display: none
+
+.text
+  font-family: 'Comfortaa', cursive
+  white-space: break-spaces
+  &-s
+    font-weight: 500
+    @media (max-width: 551.98px)
+      font-size: 14px
+    @media (min-width: 728px)
+      font-size: 18px
+  &-m
+    font-weight: 300
+    @media (max-width: 551.98px)
+      font-size: 18px
+    @media (min-width: 728px)
+      font-size: 21px
+  &-l
+    font-weight: 700
+    @media (max-width: 551.98px)
+      font-size: 18px
+    @media (min-width: 728px)
+      font-size: 24px
+  &-xl
+    margin-top: 0
+    padding-top: 0.67em
+    text-align: center
+    font-weight: 700
+    color: $page-red
+    @media (max-width: 727px)
+      font-size: 100px
+    @media (min-width: 728px)
+      font-size: 79px
+
+.tag
+  margin-bottom: .5rem
+  margin-right: .5rem
+  display: inline-block
+  padding: .5em 1rem
+  border-radius: 50px
+  cursor: pointer
+  color: $form-green
+  background-color: $form-dark-grey
+
+.center
+  text-align: center
+
+.preview
+  margin-top: 3rem
+  height: 20vh
+
